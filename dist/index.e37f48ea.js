@@ -603,7 +603,7 @@ const loadPicture = async function() {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
-const API_URL = "http://shibe.online/api/shibes";
+const API_URL = "https://shibe.online/api/shibes?httpsUrls=true";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
