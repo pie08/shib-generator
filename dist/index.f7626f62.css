@@ -29,7 +29,7 @@ body {
 
 .header-secondary:hover {
   text-shadow: 0 1rem 2rem #00000026;
-  transform: skewY(7deg)skewX(3deg);
+  transform: skewY(7deg)skewX(3deg)scale(1.15);
 }
 
 .heading-tertiary {
