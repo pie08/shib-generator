@@ -6,7 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shibe</title>
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" src="src/js/controller.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="section-pictures">
+        <div class="bg-video">
+          <video class="bg-video__content" autoplay muted loop>
+            <source
+              src="./src/img/coverr-land-in-the-middle-of-the-ocean-5777-1080p.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
+        <div class="img-box">
+          <div class="img-box__img-container">
+            <img class="img-box__image" />
+          </div>
+
+          <button class="btn img-box__btn">Generate one more!</button>
+        </div>
+      </section>
+
+      <section class="section-facts">
+        <div class="u-center-text u-margin-bottom-large">
+          <h2 class="header-secondary">Shiba facts</h2>
+        </div>
+
+        <div class="facts-box">
+          <div class="facts-box__fact">
+            <div class="facts-box__text">
+              <h3 class="heading-tertiary u-margin-bottom-tiny">
+                Dogs are great animals
+              </h3>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                autem reprehenderit aliquam hic a iste delectus earum nobis
+                eligendi, maxime nesciunt, dolorum aut cum est animi itaque, non
+                architecto sed?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

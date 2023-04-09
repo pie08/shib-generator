@@ -1,0 +1,10 @@
+.section-pictures {
+  position: relative;
+  height: 115vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+}
+
+.section-facts {
+  padding: 25rem 0;
+  transform: translateY(-15vh);
+}

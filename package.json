@@ -9,6 +9,7 @@
   "author": "Tyrus Berggren",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3"
   }
 }
