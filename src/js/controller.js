@@ -1,10 +1,11 @@
 import * as model from "./model.js";
-import view from "./view.js";
+import photoView from "./views/photoView.js";
+import factsView from "./views/factsView.js";
 
 const controlGetPicture = async function () {
   try {
     await model.loadPicture();
-    view.renderPicture(model.state.picture);
+    photoView.renderPicture(model.state.picture);
   } catch (err) {
     console.error(err);
   }
@@ -12,11 +13,21 @@ const controlGetPicture = async function () {
 
 const controlRegenerateImage = async function () {
   await model.loadPicture();
-  view.renderPicture(model.state.picture);
+  photoView.renderPicture(model.state.picture);
 };
 
+const controlGetFact = async function () {
+  try {
+    await model.loadFact();
+    factsView.render(model.state.facts);
+  } catch (err) {
+    console.error(err);
+  }
+};
+controlGetFact();
+
 const init = function () {
-  view.addHandlerLoad(controlGetPicture);
-  view.addHandlerRegenerate(controlRegenerateImage);
+  photoView.addHandlerLoad(controlGetPicture);
+  photoView.addHandlerRegenerate(controlRegenerateImage);
 };
 init();

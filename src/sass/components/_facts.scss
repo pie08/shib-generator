@@ -1,0 +1,29 @@
+.facts-box {
+  color: $color-text-gray;
+
+  &__fact {
+    background-image: linear-gradient(
+      to right,
+      rgba($color-tertiary-purple, 0.8),
+      rgba($color-secondary-purple, 0.8)
+    );
+    width: 45%;
+    margin: 0 auto;
+    padding: 6rem 8rem;
+    transform: skewX(-14deg);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: skewX(-14deg) translateY(-1rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__text {
+    transform: skewX(14deg);
+  }
+}
