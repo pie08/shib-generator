@@ -15,6 +15,16 @@
     cursor: pointer;
   }
 
+  &__label:hover &__icon {
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
   &__icon {
     position: absolute;
     top: 50%;
@@ -114,11 +124,15 @@
 
     &:before {
       top: 0;
+      height: 2px;
+      background-color: $color-text-gray;
       transform: rotate(135deg);
     }
 
     &:after {
       top: 0;
+      height: 2px;
+      background-color: $color-text-gray;
       transform: rotate(-135deg);
     }
   }

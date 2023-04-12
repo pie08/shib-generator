@@ -5,12 +5,14 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist",
+    "compile": "node-sass src/sass/main.scss src/css/style.css -w"
   },
   "author": "Tyrus Berggren",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
+    "node-sass": "^8.0.0",
     "parcel": "^2.8.3"
   }
 }
