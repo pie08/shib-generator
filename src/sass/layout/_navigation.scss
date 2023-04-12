@@ -1,0 +1,125 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    z-index: 9999;
+
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+
+    &,
+    &::before,
+    &::after {
+      height: 1px;
+      width: 3rem;
+      background-color: $color-black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      position: absolute;
+      top: -0.8rem;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0.8rem;
+    }
+  }
+
+  &__nav {
+    background-color: rgba($color-light-gray, 0.8);
+    box-shadow: 1rem 0 2rem rgba($color-black, 0.2);
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9998;
+    padding: 4rem;
+
+    opacity: 0;
+    transform: translateX(20vw);
+    transition: all 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 8rem;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: block;
+      font-size: 2rem;
+      padding: 2rem;
+      border-radius: 3px;
+      text-decoration: none;
+      color: $color-text-gray;
+      background-color: $color-tertiary-purple;
+      background-image: linear-gradient(
+        120deg,
+        transparent 50%,
+        $color-primary-purple 50%
+      );
+      text-align: center;
+      background-size: 220%;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-text-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+      transform: scale(1.07);
+    }
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__checkbox:checked + &__label &__icon {
+    background-color: transparent;
+
+    &:before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+}
