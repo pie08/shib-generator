@@ -5,7 +5,7 @@ import pinsView from "./views/pinsView.js";
 import navView from "./views/navView.js";
 
 // POLYFILLS
-import "core.js";
+import "core.js/stable";
 import "regenerator-runtime";
 
 const controlGetPicture = async function () {
