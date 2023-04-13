@@ -3,7 +3,6 @@ class View {
   _parentElement = document.querySelector(".facts-box");
 
   render = function (facts) {
-    console.log(this._parentElement);
     this._data = facts;
     const markup = this._generateMarkup();
 

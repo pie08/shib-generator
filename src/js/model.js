@@ -3,6 +3,7 @@ import { API_URL, API_FACTS_URL } from "./config";
 export const state = {
   picture: "",
   facts: [],
+  pins: [],
 };
 
 export const loadPicture = async function () {
@@ -21,8 +22,13 @@ export const loadFact = async function () {
     const res = await fetch(`${API_FACTS_URL}?number=1`);
     const data = await res.json();
     state.facts = data.data;
-    console.log(state);
   } catch (err) {
     throw err;
   }
+};
+
+export const addPin = function () {
+  if (state.pins.includes(state.picture)) return;
+  state.pins.push(state.picture);
+  console.log(state);
 };

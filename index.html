@@ -12,20 +12,25 @@
     />
 
     <link rel="stylesheet" href="./src/icons/styles.css" />
+    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
     <link rel="stylesheet" href="src/sass/main.scss" />
     <script type="module" src="src/js/controller.js"></script>
   </head>
   <body>
     <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
-      <label for="navi-toggle" class="navigation__label">
+      <button class="navigation__button">
         <span class="navigation__icon"></span>
-      </label>
+      </button>
+
+      <div class="navigation__background"></div>
 
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"> Pins! </a>
+            <button class="navigation__btn navigation__btn-pinned">
+              <span>01</span>
+              Pins!
+            </button>
           </li>
         </ul>
       </nav>
@@ -47,9 +52,13 @@
             <img class="img-box__image" src="#" />
           </div>
 
-          <button class="btn img-box__btn">Generate one more!</button>
-          <div class="img-box__icon-box">
-            <i class="img-box__icon icon-basic-pin2"></i>
+          <div class="img-box__btns-box">
+            <button class="btn img-box__btn">Generate one more!</button>
+            <div class="img-box__icon-box">
+              <button class="img-box__btn-pin">
+                <i class="img-box__icon icon-basic-pin2"></i>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -76,5 +85,26 @@
         </div>
       </section>
     </main>
+
+    <div class="pins">
+      <h3 class="pins__heading">Pins</h3>
+      <button class="pins__btn-close">
+        <i class="pins__icon icon-arrows-remove"></i>
+      </button>
+      <ul class="pins__list">
+        <li class="pins__item" data-img="">
+          <a href="#" class="pins__link">
+            <div class="pins__shape">
+              <img
+                src="https://cdn.shibe.online/shibes/6ed47769263086dd5435448e80bbe2fd4f6a5439.jpg"
+                alt="Dog"
+                class="pins__preview"
+              />
+            </div>
+            <p class="pins__text">Pinned image 1</p>
+          </a>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

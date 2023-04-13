@@ -149,6 +149,12 @@ body {
   right: 3rem;
   cursor: pointer; }
 
+.navigation__label:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__label:hover .navigation__icon::after {
+  top: 1rem; }
+
 .navigation__icon {
   position: absolute;
   top: 50%;
@@ -175,7 +181,7 @@ body {
 .navigation__nav {
   background-color: rgba(247, 247, 247, 0.8);
   box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.2);
-  width: 20vw;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -183,7 +189,7 @@ body {
   z-index: 9998;
   padding: 4rem;
   opacity: 0;
-  transform: translateX(20vw);
+  transform: translateX(100%);
   transition: all 0.4s cubic-bezier(0.83, 0, 0.17, 1); }
 
 .navigation__list {
@@ -220,9 +226,13 @@ body {
   background-color: transparent; }
   .navigation__checkbox:checked + .navigation__label .navigation__icon:before {
     top: 0;
+    height: 2px;
+    background-color: #333;
     transform: rotate(135deg); }
   .navigation__checkbox:checked + .navigation__label .navigation__icon:after {
     top: 0;
+    height: 2px;
+    background-color: #333;
     transform: rotate(-135deg); }
 
 .section-pictures {

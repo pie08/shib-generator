@@ -3,7 +3,7 @@ const generateBtn = document.querySelector(".img-box__btn");
 class View {
   _parentElement = document.querySelector(".img-box__image");
 
-  renderPicture = function (pictureUrl) {
+  render = function (pictureUrl) {
     const img = this._parentElement;
     this._parentElement.style.opacity = 0;
     const downloadingImage = new Image();
