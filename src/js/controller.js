@@ -41,12 +41,18 @@ const controlLoadPin = function (imgUrl) {
   photoView.render(imgUrl);
 };
 
+const controlClearPins = function () {
+  model.clearPins();
+  pinsView.render(model.state.pins);
+};
+
 const init = function () {
   photoView.addHandlerLoad(controlGetPicture);
   photoView.addHandlerRegenerate(controlRegenerateImage);
   navView.addListenerOpenNav();
   pinsView.addHandlerAddPin(controlAddPin);
   pinsView.addHandlerLoadPin(controlLoadPin);
+  pinsView.addHandlerClearPins(controlClearPins);
   pinsView.addListenerOpenPins();
   pinsView.addListenerClosePins();
 };

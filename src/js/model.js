@@ -28,7 +28,24 @@ export const loadFact = async function () {
 };
 
 export const addPin = function () {
+  console.log(state);
   if (state.pins.includes(state.picture)) return;
   state.pins.push(state.picture);
-  console.log(state);
+
+  persistPins();
 };
+
+export const clearPins = function () {
+  localStorage.removeItem("pins");
+  state.pins = [];
+};
+
+const persistPins = function () {
+  localStorage.setItem("pins", JSON.stringify(state.pins));
+};
+
+const init = function () {
+  const storage = localStorage.getItem("pins");
+  if (storage) state.pins = JSON.parse(storage);
+};
+init();

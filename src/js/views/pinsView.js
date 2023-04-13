@@ -4,9 +4,9 @@ class pinsView {
   _btnNavOpenPin = document.querySelector(".navigation__btn-pinned");
   _btnClosePins = document.querySelector(".pins__btn-close");
   _btnAddPin = document.querySelector(".img-box__btn-pin");
+  _btnClear = document.querySelector(".pins__btn-clear");
 
   render = function (data) {
-    console.log(this.baseElement);
     this._data = data;
     const markup = this._generateMarkup();
 
@@ -60,6 +60,10 @@ class pinsView {
       const btn = e.target.closest(".pins__item");
       if (btn) handler(btn.dataset.img);
     });
+  };
+
+  addHandlerClearPins = function (handler) {
+    this._btnClear.addEventListener("click", handler);
   };
 
   addListenerOpenPins = function () {
