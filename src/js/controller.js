@@ -6,7 +6,7 @@ import navView from "./views/navView.js";
 
 // POLYFILLS
 import "core.js/stable";
-import "regenerator-runtime";
+import "regenerator-runtime/runtime";
 
 const controlGetPicture = async function () {
   try {
