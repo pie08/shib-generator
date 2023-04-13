@@ -8,6 +8,7 @@
   text-align: center;
   transform: translateX(-100%);
   transition: all 0.6s;
+  overflow-y: scroll;
 
   &__heading {
     margin-top: 5rem;
