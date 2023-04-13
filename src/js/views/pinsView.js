@@ -6,7 +6,7 @@ class pinsView {
   _btnAddPin = document.querySelector(".img-box__btn-pin");
 
   render = function (data) {
-    console.log(this._parentElement);
+    console.log(this.baseElement);
     this._data = data;
     const markup = this._generateMarkup();
 
@@ -40,12 +40,12 @@ class pinsView {
   };
 
   _openPins = function () {
-    document.querySelector(".pins").classList.add("open");
+    this._baseElement.classList.add("open");
     document.querySelector(".navigation").classList.toggle("open");
   };
 
   _closePins = function () {
-    document.querySelector(".pins").classList.remove("open");
+    this._baseElement.classList.remove("open");
   };
 
   addHandlerAddPin = function (handler) {
@@ -56,20 +56,18 @@ class pinsView {
   };
 
   addHandlerLoadPin = function (handler) {
-    document
-      .querySelector(".pins__list")
-      .addEventListener("click", function (e) {
-        const btn = e.target.closest(".pins__item");
-        if (btn) handler(btn.dataset.img);
-      });
+    this._parentElement.addEventListener("click", function (e) {
+      const btn = e.target.closest(".pins__item");
+      if (btn) handler(btn.dataset.img);
+    });
   };
 
   addListenerOpenPins = function () {
-    this._btnNavOpenPin.addEventListener("click", this._openPins);
+    this._btnNavOpenPin.addEventListener("click", this._openPins.bind(this));
   };
 
   addListenerClosePins = function () {
-    this._btnClosePins.addEventListener("click", this._closePins);
+    this._btnClosePins.addEventListener("click", this._closePins.bind(this));
   };
 }
 

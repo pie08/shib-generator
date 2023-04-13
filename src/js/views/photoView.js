@@ -1,7 +1,6 @@
-const generateBtn = document.querySelector(".img-box__btn");
-
 class View {
   _parentElement = document.querySelector(".img-box__image");
+  _btnGenerate = document.querySelector(".img-box__btn");
 
   render = function (pictureUrl) {
     const img = this._parentElement;
@@ -25,7 +24,7 @@ class View {
   };
 
   addHandlerRegenerate = function (handler) {
-    generateBtn.addEventListener("click", handler);
+    this._btnGenerate.addEventListener("click", handler);
   };
 }
 
