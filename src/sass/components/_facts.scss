@@ -13,9 +13,20 @@
     transform: skewX(-14deg);
     transition: all 0.3s;
 
+    @include respond(phone) {
+      transform: skewX(0);
+      border-radius: 1rem;
+      padding: 3rem 4rem;
+      width: 65%;
+    }
+
     &:hover {
       transform: skewX(-14deg) translateY(-1rem);
       box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+
+      @include respond(phone) {
+        transform: skewX(0) translateY(-1rem);
+      }
     }
 
     &:not(:last-child) {
@@ -25,5 +36,9 @@
 
   &__text {
     transform: skewX(14deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 }

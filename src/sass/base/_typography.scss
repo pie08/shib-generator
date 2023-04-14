@@ -23,6 +23,10 @@ body {
     transform: skewY(3deg) skewX(3deg) scale(1.15);
     text-shadow: 0 1rem 2rem rgba($color-black, 0.15);
   }
+
+  @include respond(tab-port) {
+    font-size: 3.5rem;
+  }
 }
 
 .heading-tertiary {
@@ -32,6 +36,6 @@ body {
 }
 
 .paragraph {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 }

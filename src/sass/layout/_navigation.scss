@@ -18,6 +18,11 @@
 
     transition: all 0.3s;
 
+    @include respond(phone) {
+      top: 1rem;
+      right: 1rem;
+    }
+
     &::before {
       content: "";
       display: inline-block;
@@ -76,6 +81,20 @@
     }
   }
 
+  @include respond(phone) {
+    &__btn-background {
+      height: 6rem;
+      width: 6rem;
+      background-color: $color-white;
+
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      border-radius: 50%;
+    }
+  }
+
   &__background {
     width: 5rem;
     height: 5rem;
@@ -90,6 +109,11 @@
     transform: scale(0);
     z-index: 999;
     transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+
+    @include respond(phone) {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
   }
 
   &__nav {
