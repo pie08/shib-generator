@@ -1,4 +1,5 @@
 import { API_URL, API_FACTS_URL } from "./config";
+import pinsView from "./views/pinsView";
 
 export const state = {
   picture: "",

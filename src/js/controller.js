@@ -55,5 +55,6 @@ const init = function () {
   pinsView.addHandlerClearPins(controlClearPins);
   pinsView.addListenerOpenPins();
   pinsView.addListenerClosePins();
+  pinsView.render(model.state.pins);
 };
 init();
